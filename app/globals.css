@@ -96,6 +96,23 @@ header {
   gap: 12px;
 }
 
+header .logo {
+  transform: scale(0.65);
+  transform-origin: left center;
+}
+
+@media (min-width: 380px) {
+  header .logo {
+    transform: scale(0.75);
+  }
+}
+
+@media (min-width: 768px) {
+  header .logo {
+    transform: scale(1);
+  }
+}
+
 .logo-icon {
   width: 50px;
   height: 50px;
@@ -159,21 +176,37 @@ nav a:hover {
 .btn-cta {
   background: rgba(10, 10, 10, 0.4);
   backdrop-filter: blur(4px);
-  padding: 12px 24px;
+  padding: 10px 16px;
   border: 1px solid rgba(212, 175, 55, 0.5);
   font-weight: 500;
   text-transform: uppercase;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  font-size: 12px;
-  letter-spacing: 2.5px;
+  font-size: 11px;
+  letter-spacing: 1.5px;
   color: var(--primary);
   font-family: "Cormorant Garamond", serif;
+  white-space: nowrap;
+}
+
+header .btn-cta {
+  padding: 8px 12px;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 380px) {
+  header .btn-cta {
+    padding: 10px 16px;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
 }
 
 @media (min-width: 768px) {
-  .btn-cta {
+  header .btn-cta, .btn-cta {
     padding: 14px 32px;
     font-size: 13px;
+    letter-spacing: 2.5px;
   }
 }
 
